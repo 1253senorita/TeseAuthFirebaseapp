@@ -1,0 +1,77 @@
+[versions]
+agp = "8.9.3"
+firebaseBomVersion = "33.14.0"
+kotlin = "2.1.20"
+coreKtx = "1.16.0"
+junit = "4.13.2"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
+appcompat = "1.7.0"
+material = "1.12.0"
+activity = "1.10.1"
+constraintlayout = "2.2.1"
+kotlinCompilerExtensionVersion = "2.1.20"
+androidx-compose-ui = "1.8.2" # Or your desired version
+
+
+
+
+# ... 다른 버전들 ...
+firebaseBom = "33.1.0"  # 사용하는 Firebase BoM의 최신 버전을 확인하세요. [3]
+firebaseUiAuth = "8.0.2" # 사용하는 FirebaseUI Auth의 최신 버전을 확인하세요.
+
+# Jetpack Compose 관련 버전 (예시, 이미 있다면 그대로 사용)
+androidxComposeBom = "2024.05.00" # 사용하는 Compose BoM 버전
+# ... 기타 필요한 버전들 ...
+# Android Gradle Plugin (AGP) 버전
+
+googleGmsServices = "4.4.1" # Google Services 플러그인 버전을 확인하세요.
+
+# ... 기타 필요한 버전들 (예: firebaseBom, firebaseUiAuth 등)
+
+
+
+[libraries]
+
+androidx-ui = { group = "androidx.compose.ui", name = "ui", version.ref = "androidx-compose-ui" }
+
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+firebase-analytics = { module = "com.google.firebase:firebase-analytics" }
+firebase-bom-v33140 = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBomVersion" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+
+
+
+
+# Firebase
+firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebaseBom" }
+firebase-auth = { group = "com.google.firebase", name = "firebase-auth-ktx" } # BoM이 버전을 관리
+firebase-ui-auth = { group = "com.firebaseui", name = "firebase-ui-auth", version.ref = "firebaseUiAuth" }
+
+# Jetpack Compose (예시, 이미 있다면 그대로 사용)
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "androidxComposeBom" }
+androidx-compose-ui = { group = "androidx.compose.ui", name = "ui" }
+# ... 기타 Compose 라이브러리들 ..
+
+
+# firebase-ui-auth = { group = "com.firebaseui", name = "firebase-ui-auth", version.ref = "firebaseUiAuth" } # 필요하다면 추가
+
+
+
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+google-gms-google-services = { id = "com.google.gms.google-services", version.ref = "googleGmsServices" }
+androidx-compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlinCompilerExtensionVersion" }
+
+
+[bundles]
+# 필요하다면 관련 라이브러리들을 묶을 수 있습니다 (선택 사항)
+# firebase-auth-bundle = ["firebase-auth", "firebase-ui-auth"]
