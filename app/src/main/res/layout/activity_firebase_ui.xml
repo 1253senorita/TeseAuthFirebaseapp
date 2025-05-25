@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".FirebaseUIActivity">
+
+    <Button
+        android:id="@+id/button_sign_in_default"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="기본 로그인 시작"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="8dp"/>
+
+    <Button
+        android:id="@+id/button_theme_logo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="테마 및 로고 적용 로그인"
+        app:layout_constraintTop_toBottomOf="@id/button_sign_in_default"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="8dp"/>
+
+    <Button
+        android:id="@+id/button_privacy_terms"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="개인정보처리방침 및 이용약관"
+        app:layout_constraintTop_toBottomOf="@id/button_theme_logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="8dp"/>
+
+    <Button
+        android:id="@+id/button_email_link_sign_in"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="이메일 링크 로그인 시작"
+        app:layout_constraintTop_toBottomOf="@id/button_privacy_terms"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="24dp"/>
+
+
+    <TextView
+        android:id="@+id/text_view_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="로그인 상태: 정보 없음"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/button_email_link_sign_in"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/button_sign_out"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="로그아웃"
+        app:layout_constraintTop_toBottomOf="@id/text_view_status"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_vertical"
+        android:layout_marginEnd="4dp"
+        android:visibility="gone" /> <!-- 초기에는 숨김 -->
+
+    <Button
+        android:id="@+id/button_delete_account"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="계정 삭제"
+        app:layout_constraintTop_toBottomOf="@id/text_view_status"
+        app:layout_constraintStart_toEndOf="@id/guideline_vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="4dp"
+        android:visibility="gone" /> <!-- 초기에는 숨김 -->
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

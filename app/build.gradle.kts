@@ -1,35 +1,23 @@
 plugins {
-
     id("com.android.application")
-    //alias(libs.plugins.android.application)
-
-
-    // alias(libs.plugins.hilt)
-    // kotlin("kapt") // Hilt와 함께 kapt 사용 시
-
-    alias(libs.plugins.kotlin.android)
-    //alias(libs.plugins.google.gms.google.services) // Firebase 사용 시 필수
-    id("com.google.gms.google-services")
-
-
-    alias(libs.plugins.androidx.compose.compiler)
+    id("com.google.gms.google-services") // Firebase 사용 시 필수
+    id("org.jetbrains.kotlin.android") // Kotlin 플러그인 명확하게 지정
+    id("org.jetbrains.kotlin.plugin.compose") version "2.1.20"
 }
 
 android {
     namespace = "com.salsample.teseauthfirebaseapp"
-    compileSdk = 35 // 사용하는 compileSdk 버전
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.salsample.teseauthfirebaseapp"
-        minSdk = 24 // 사용하는 minSdk 버전
-        targetSdk = 34 // 사용하는 targetSdk 버전
+        minSdk = 24
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        vectorDrawables {
-            useSupportLibrary = true
-        }
+        vectorDrawables.useSupportLibrary = true
     }
 
     buildTypes {
@@ -41,58 +29,52 @@ android {
             )
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
     buildFeatures {
-        compose = true // Jetpack Compose 사용 시
+        compose = true
     }
+
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.8" // 사용하는 Compose Compiler 버전에 맞게 설정 (Kotlin 버전과 호환되어야 함)
+        kotlinCompilerExtensionVersion = "1.5.8"
     }
-    packaging {
-        resources {
-            excludes += "/META-INF/{AL2.0,LGPL2.1}"
-        }
-    }
+
+    packaging.resources.excludes += "/META-INF/{AL2.0,LGPL2.1}"
 }
 
 dependencies {
+    implementation(platform(libs.firebase.bom.v33130))
+    implementation(libs.google.firebase.auth)
+    implementation(libs.google.firebase.analytics)
+    implementation(libs.firebase.ui.auth.v900)
 
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.material)
-    implementation(libs.androidx.activity)
-    implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.core.ktx.v1120)
+    implementation(libs.androidx.appcompat.v161)
+    implementation(libs.material.v1110)
+    implementation(libs.androidx.activity.ktx)
+    implementation(libs.androidx.constraintlayout.v214)
+
     testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
+    androidTestImplementation(libs.androidx.junit.v115)
+    androidTestImplementation(libs.androidx.espresso.core.v351)
 
-    implementation(platform(libs.firebase.bom))
-    implementation(libs.firebase.auth)
-    implementation(libs.firebase.ui.auth) // 필요하다면 추가
+    // Jetpack Compose 의존성
+    implementation(platform(libs.androidx.compose.bom.v20240100))
+    implementation(libs.ui)
+    implementation(libs.androidx.material)
+    implementation(libs.androidx.ui.tooling.preview)
+    debugImplementation(libs.androidx.ui.tooling)
 
-    // Jetpack Compose 의존성 (예시)
-    implementation(platform(libs.androidx.compose.bom))
-    implementation(libs.androidx.ui)
-    implementation(libs.androidx.compose.ui)
-    //implementation(libs.androidx.compose.material) // 또는 libs.androidx.compose.material3
-    //implementation(libs.androidx.compose.ui.tooling.preview)
-    //debugImplementation(libs.androidx.compose.ui.tooling)
-
-    // 기타 필요한 의존성들
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.material)
-    // ...
-    implementation(platform(libs.firebase.bom.v33140))
-    implementation(libs.firebase.analytics)
-
+    // Facebook SDK (필요한 경우)
+    implementation(libs.facebook.android.sdk.v8x)
+    implementation(libs.facebook.login)
+    implementation(libs.facebook.android.sdk.v1600) // 최신 버전 확인 필요
 }
-
-
-
