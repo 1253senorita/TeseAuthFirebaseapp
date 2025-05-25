@@ -1,5 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <resources>
 
-    <style name="MySuperAppTheme">mysuper_apptheme</style>
+<style name="MySuperAppTheme">mysuper_apptheme</style>
+<!-- 기본 앱 테마 -->
+<style name="Theme.TeseAuthFirebaseApp" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <!-- 기본 테마 속성들 -->
+</style>
+
+<!-- 스플래시 화면용 테마 -->
+<style name="Theme.App.Starting" parent="Theme.SplashScreen"> // Android 12+
+    <item name="windowSplashScreenBackground">@color/splash_background</item>
+    <item name="windowSplashScreenAnimatedIcon">@drawable/ic_app_logo</item>
+    <item name="windowSplashScreenAnimationDuration">1000</item> // 애니메이션 지속 시간 (ms)
+    <item name="postSplashScreenTheme">@style/Theme.TeseAuthFirebaseApp</item> // 스플래시 이후 적용될 테마
+</style>
+
+<!-- Android 11 이하를 위한 스플래시 테마 (windowBackground 사용) -->
+<style name="Theme.App.SplashLegacy" parent="Theme.AppCompat.NoActionBar">
+    <item name="android:windowBackground">@drawable/splash_drawable</item>
+</style>
+<!-- splash_drawable.xml (res/drawable) -->
+<!--
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/splash_background" />
+    <item>
+        <bitmap
+            android:gravity="center"
+            android:src="@drawable/ic_app_logo" />
+    </item>
+</layer-list>
+-->
 </resources>

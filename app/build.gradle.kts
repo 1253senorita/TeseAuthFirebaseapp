@@ -77,4 +77,9 @@ dependencies {
     implementation(libs.facebook.android.sdk.v8x)
     implementation(libs.facebook.login)
     implementation(libs.facebook.android.sdk.v1600) // 최신 버전 확인 필요
+    
+
+    //implementation "androidx.core:core-splashscreen:1.0.0"
+
+
 }
