@@ -116,6 +116,7 @@ dependencies {
     implementation(libs.facebook.android.sdk.v8x)
     implementation(libs.facebook.login)
     implementation(libs.facebook.android.sdk.v1600) // 최신 버전 확인 필요
+<<<<<<< HEAD
 
 
     implementation("com.example:some-library:1.0.0@pom")
@@ -130,3 +131,11 @@ dependencies {
     implementation(libs.androidx.core.ktx)
 
 }
+=======
+    
+
+    //implementation "androidx.core:core-splashscreen:1.0.0"
+
+
+}
+>>>>>>> e11b254 (작업한 변경 사항 커밋 메시지)
