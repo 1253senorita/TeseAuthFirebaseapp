@@ -1,0 +1,52 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
+rootProject.name = "quickstart-android-master"
+
+include(":admob:app")
+include(":firebase-ai:app")
+include(":analytics:app")
+include(":appdistribution:app")
+include(":auth:app")
+include(":config:app")
+include(":crash:app")
+include(":database:app")
+include(":dataconnect:app")
+include(":dynamiclinks:app")
+include(":firestore:app")
+include(":functions:app")
+include(":internal:chooserx")
+include(":internal:lint")
+include(":internal:lintchecks")
+include(":inappmessaging:app")
+include(":messaging:app")
+include(":perf:app")
+include(":storage:app")
+include(":vertexai:app")
+
+// 각 모듈의 실제 디렉토리 지정
+project(":admob:app").projectDir = file("C:/Users/55341/quickstart-android-master/admob/app")
+project(":firebase-ai:app").projectDir = file("C:/Users/55341/quickstart-android-master/firebase-ai/app")
+project(":analytics:app").projectDir = file("C:/Users/55341/quickstart-android-master/analytics/app")
+project(":appdistribution:app").projectDir = file("C:/Users/55341/quickstart-android-master/appdistribution/app")
+project(":auth:app").projectDir = file("C:/Users/55341/quickstart-android-master/auth/app")
+project(":config:app").projectDir = file("C:/Users/55341/quickstart-android-master/config/app")
+project(":crash:app").projectDir = file("C:/Users/55341/quickstart-android-master/crash/app")
+project(":database:app").projectDir = file("C:/Users/55341/quickstart-android-master/database/app")
+project(":dataconnect:app").projectDir = file("C:/Users/55341/quickstart-android-master/dataconnect/app")
+project(":dynamiclinks:app").projectDir = file("C:/Users/55341/quickstart-android-master/dynamiclinks/app")
+project(":firestore:app").projectDir = file("C:/Users/55341/quickstart-android-master/firestore/app")
+project(":functions:app").projectDir = file("C:/Users/55341/quickstart-android-master/functions/app")
+project(":internal:chooserx").projectDir = file("C:/Users/55341/quickstart-android-master/internal/chooserx")
+project(":internal:lint").projectDir = file("C:/Users/55341/quickstart-android-master/internal/lint")
+project(":internal:lintchecks").projectDir = file("C:/Users/55341/quickstart-android-master/internal/lintchecks")
+project(":inappmessaging:app").projectDir = file("C:/Users/55341/quickstart-android-master/inappmessaging/app")
+project(":messaging:app").projectDir = file("C:/Users/55341/quickstart-android-master/messaging/app")
+project(":perf:app").projectDir = file("C:/Users/55341/quickstart-android-master/perf/app")
+project(":storage:app").projectDir = file("C:/Users/55341/quickstart-android-master/storage/app")
+project(":vertexai:app").projectDir = file("C:/Users/55341/quickstart-android-master/vertexai/app")

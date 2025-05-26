@@ -25,13 +25,14 @@ activity = "1.10.1"
 constraintlayout = "2.2.1"
 kotlinCompilerExtensionVersion = "2.1.20"
 androidx-compose-ui = "1.8.2" # Or your desired version
-
-
+okhttp = "3.12.13"
+firebase-perf = "21.0.5"
+androidx-core = "1.9.0"
 
 
 # ... 다른 버전들 ...
-firebaseBom = "33.14.0"  # 사용하는 Firebase BoM의 최신 버전을 확인하세요. [3]
-firebaseUiAuth = "9.0.0" # 사용하는 FirebaseUI Auth의 최신 버전을 확인하세요.
+firebaseBom = "34.0.0"  # Firebase BOM 최신 버전
+firebaseUiAuth = "9.0.0"  # Firebase UI Auth 최신 버전
 
 # Jetpack Compose 관련 버전 (예시, 이미 있다면 그대로 사용)
 androidxComposeBom = "2025.05.01" # 사용하는 Compose BoM 버전
@@ -43,11 +44,21 @@ materialVersion = "1.12.0"
 
 # ... 기타 필요한 버전들 (예: firebaseBom, firebaseUiAuth 등)
 
+androidxActivityKtx = "1.10.1"
+firebaseAuthKtx = "23.2.1" # Or your desired version
 
 
 [libraries]
 
-androidx-activity-ktx = { module = "androidx.activity:activity-ktx", version.ref = "activityKtx" }
+
+
+
+okhttp-lib = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttp" }
+firebase-perf-lib = { module = "com.google.firebase:firebase-perf", version.ref = "firebase-perf" }
+
+androidx-activity-ktx = { group = "androidx.activity", name = "activity-ktx", version.ref = "androidxActivityKtx" }
+
+
 androidx-appcompat-v161 = { module = "androidx.appcompat:appcompat", version.ref = "appcompatVersion" }
 androidx-compose-bom-v20240100 = { module = "androidx.compose:compose-bom", version.ref = "composeBom" }
 androidx-constraintlayout-v214 = { module = "androidx.constraintlayout:constraintlayout", version.ref = "constraintlayoutVersion" }
@@ -64,12 +75,23 @@ facebook-android-sdk = { module = "com.facebook.android:facebook-android-sdk", v
 facebook-android-sdk-v1600 = { module = "com.facebook.android:facebook-android-sdk", version.ref = "facebookFacebookAndroidSdk" }
 facebook-android-sdk-v8x = { module = "com.facebook.android:facebook-android-sdk", version.ref = "facebookAndroidSdkVersion" }
 facebook-login = { module = "com.facebook.android:facebook-login", version.ref = "facebookLogin" }
+
+
+# Firebase BOM을 통해 모든 Firebase 라이브러리 버전 자동 관리
+firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
+
+# Firebase 라이브러리 (BOM을 통해 버전 자동 적용)
+firebase-auth = { module = "com.google.firebase:firebase-auth" }
 firebase-analytics = { module = "com.google.firebase:firebase-analytics" }
-firebase-bom-v33130 = { module = "com.google.firebase:firebase-bom", version.ref = "googleFirebaseBom" }
-firebase-bom-v33140 = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBomVersion" }
-firebase-ui-auth-v900 = { module = "com.firebaseui:firebase-ui-auth", version.ref = "firebaseUiAuthVersion" }
-google-firebase-analytics = { module = "com.google.firebase:firebase-analytics" }
-google-firebase-auth = { module = "com.google.firebase:firebase-auth" }
+firebase-firestore = { module = "com.google.firebase:firebase-firestore" }
+firebase-crashlytics = { module = "com.google.firebase:firebase-crashlytics" }
+firebase-perf = { module = "com.google.firebase:firebase-perf" }
+
+# Firebase UI Auth (BOM과 별도로 관리)
+firebase-ui-auth = { module = "com.firebaseui:firebase-ui-auth", version.ref = "firebaseUiAuth" }
+
+
+
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
@@ -81,16 +103,13 @@ androidx-constraintlayout = { group = "androidx.constraintlayout", name = "const
 
 
 
-# Firebase
-firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebaseBom" }
-firebase-auth = { group = "com.google.firebase", name = "firebase-auth-ktx" } # BoM이 버전을 관리
-firebase-ui-auth = { group = "com.firebaseui", name = "firebase-ui-auth", version.ref = "firebaseUiAuth" }
 
 # Jetpack Compose (예시, 이미 있다면 그대로 사용)
 androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "androidxComposeBom" }
 androidx-compose-ui = { group = "androidx.compose.ui", name = "ui" }
 material-v1110 = { module = "com.google.android.material:material", version.ref = "materialVersion" }
 ui = { module = "androidx.compose.ui:ui" }
+firebase-auth-ktx = { group = "com.google.firebase", name = "firebase-auth-ktx", version.ref = "firebaseAuthKtx" }
 # ... 기타 Compose 라이브러리들 ..
 
 
