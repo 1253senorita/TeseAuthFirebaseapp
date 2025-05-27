@@ -82,17 +82,39 @@ android {
 
 dependencies {
     // Firebase BOM을 사용하여 모든 Firebase 라이브러리 버전 자동 관리
-    implementation(platform("com.google.firebase:firebase-bom:33.14.0"))
+    implementation(libs.firebase.bom.v33140)
 
     // Firebase 라이브러리 (BOM을 통해 버전 자동 적용)
     implementation("com.google.firebase:firebase-auth")
+
+    implementation("com.firebaseui:firebase-ui-auth:9.0.0")
     implementation("com.google.firebase:firebase-analytics")
     implementation("com.google.firebase:firebase-firestore")
     implementation("com.google.firebase:firebase-crashlytics")
     implementation("com.google.firebase:firebase-perf")
 
+
+
+    // ... other dependencies
+    val composeVersion = "1.6.8" // Or the latest stable version
+
+    implementation("androidx.compose.ui:ui:$composeVersion")
+    implementation("androidx.compose.material:material:$composeVersion") // If you use Material Design
+    implementation("androidx.compose.ui:ui-tooling-preview:$composeVersion")
+    debugImplementation("androidx.compose.ui:ui-tooling:$composeVersion")
+
+
+   // implementation("com.facebook.android:facebook-android-sdk:8.x")
     // Firebase UI Auth (BOM과 별도로 관리)
-    implementation("com.firebaseui:firebase-ui-auth:9.0.0")
+
+
+    // Import the BoM for the Firebase platform
+
+
+    // Add the dependency for the Firebase Authentication library
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+
+
 
     // AndroidX 및 기타 라이브러리 (변경 없음)
     implementation(libs.androidx.core.ktx.v1120)
@@ -112,30 +134,35 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview)
     debugImplementation(libs.androidx.ui.tooling)
 
+
+
+
+
     // Facebook SDK (필요한 경우)
     implementation(libs.facebook.android.sdk.v8x)
     implementation(libs.facebook.login)
     implementation(libs.facebook.android.sdk.v1600) // 최신 버전 확인 필요
-<<<<<<< HEAD
 
 
-    implementation("com.example:some-library:1.0.0@pom")
-    //implementation("com.google.firebase:firebase-bom:34.0.0")
-    implementation("com.example:some-library:1.0.0") {
-        exclude(group = "com.conflicting.group", module = "conflicting-module")
-    }
+
+    // 만약 Retrofit 라이브러리가 필요했다면:
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0") // 예시: Gson 변환기와 함께 사용
 
 
     implementation(libs.okhttp.lib)
     implementation(libs.firebase.perf.lib)
     implementation(libs.androidx.core.ktx)
+    implementation ("androidx.core:core-splashscreen:1.0.0")
+
+
 
 }
-=======
+
     
 
-    //implementation "androidx.core:core-splashscreen:1.0.0"
 
 
-}
->>>>>>> e11b254 (작업한 변경 사항 커밋 메시지)
+
+
+

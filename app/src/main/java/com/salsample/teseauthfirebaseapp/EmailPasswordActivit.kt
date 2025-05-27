@@ -1,7 +1,5 @@
 package com.salsample.teseauthfirebaseapp
 
-//package com.google.firebase.quickstart.auth.kotlin
-
 import android.app.Activity
 import android.os.Bundle
 import android.util.Log

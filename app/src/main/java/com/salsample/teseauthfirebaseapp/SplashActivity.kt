@@ -19,11 +19,11 @@ class SplashActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-<<<<<<< HEAD
+
         setContentView(R.layout.activity_splash) // 레이아웃이 있다면 설정
-=======
+
         // setContentView(R.layout.activity_splash) // 레이아웃이 있다면 설정
->>>>>>> e11b254 (작업한 변경 사항 커밋 메시지)
+
 
         auth = Firebase.auth
 
