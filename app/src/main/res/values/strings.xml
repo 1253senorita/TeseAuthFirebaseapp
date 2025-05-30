@@ -3,4 +3,15 @@
     <string name="default_web_client_id">guguil</string>
     <string name="sign_in_text">Sign In</string>
 
+
+
+<string name="hint_email">이메일을 입력하세요</string>
+<string name="hint_password">비밀번호를 입력하세요</string>
+<string name="button_login">로그인</string>
+<string name="button_signup">회원가입</string>
+<!-- AuthActivity.kt에서 사용하는 문자열 (선택적 추가) -->
+<string name="login_success">로그인 성공!</string>
+<string name="login_failed">로그인 실패: %1$s</string>
+<string name="signup_success">회원가입 성공!</string>
+<string name="signup_failed">회원가입 실패: %1$s</string>
 </resources>

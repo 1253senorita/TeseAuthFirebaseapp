@@ -4,18 +4,15 @@ package com.salsample.teseauthfirebaseapp
 
 import android.net.Uri
 import android.os.Bundle
-import android.provider.CalendarContract.Instances.END
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.facebook.AccessToken
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.firebase.FirebaseException
 import com.google.firebase.auth.ActionCodeSettings
 import com.google.firebase.auth.AuthCredential
 import com.google.firebase.auth.EmailAuthProvider
-import com.google.firebase.auth.FacebookAuthProvider
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GithubAuthProvider
 import com.google.firebase.auth.GoogleAuthProvider
@@ -27,20 +24,19 @@ import com.google.firebase.auth.actionCodeSettings
 import com.google.firebase.auth.auth
 import com.google.firebase.auth.userProfileChangeRequest
 import com.google.firebase.Firebase
-import kotlinx.coroutines.flow.SharingCommand
 //import com.google.firebase.quickstart.auth.R
 import java.util.concurrent.TimeUnit
 
 /**
  * Created by harshitdwivedi on 14/03/18.
  */
-abstract class MainActivity : AppCompatActivity() {
+abstract class ModernizeActivity : AppCompatActivity() {
 
     private val TAG = "MainActivity"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_modernize)
     }
 
     private fun checkCurrentUser() {
@@ -441,7 +437,7 @@ private fun getFbCredentials() {
                     // ...
 
                     // The corresponding whitelisted code above should be used to complete sign-in.
-                    this@MainActivity.enableUserManuallyInputCode()
+                    this@ModernizeActivity.enableUserManuallyInputCode()
                 }
 
                 override fun onVerificationCompleted(phoneAuthCredential: PhoneAuthCredential) {
