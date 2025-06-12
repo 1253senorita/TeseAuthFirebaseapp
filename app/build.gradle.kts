@@ -3,7 +3,7 @@ plugins {
     id("com.google.gms.google-services") // Firebase 사용 시 필수
     id("org.jetbrains.kotlin.android") // Kotlin 플러그인 명확하게 지정
     id("org.jetbrains.kotlin.plugin.compose") version "2.2.0-RC"
-    id("com.google.firebase.crashlytics") version "3.0.3"
+    id("com.google.firebase.crashlytics") version "3.0.4"
     id("com.google.firebase.firebase-perf") version "1.4.2"
 
     id("com.github.ben-manes.versions") version "0.52.0"
@@ -47,14 +47,22 @@ android {
     buildFeatures {
         compose = true
     }
+    signingConfigs {
+        debug {
+            storeFile file("debug.keystore")
+            storePassword "android"
+            keyAlias "androiddebugkey"
+            keyPassword "android"
+        }
+        release {
+            storeFile file("release.keystore")
+            storePassword "your-password"
+            keyAlias "your-alias"
+            keyPassword "your-password"
+        }
+    }
 
-    // signingConfigs {
-    // You can leave this empty if you're only using the default debug signing
-    // Or be explicit:
-    // debug {
-    //     // Default debug signing config is usually handled by AS
-    // }
-    // }
+
 
     buildTypes {
         getByName("debug") {
@@ -155,7 +163,7 @@ dependencies {
     implementation(libs.androidx.core.ktx)
     implementation ("androidx.core:core-splashscreen:1.0.0")
 
-
+    implementation(project(":quickstart-android-master"))  // 최신 버전 확인 필요
 
 }
 

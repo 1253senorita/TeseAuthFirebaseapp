@@ -2,8 +2,8 @@
 activityKtx = "1.10.1"
 agp = "8.9.3"
 androidxJunit = "1.2.1"
-appcompatVersion = "1.7.0"
-composeBom = "2025.05.01"
+appcompatVersion = "1.7.1"
+composeBom = "2025.06.00"
 constraintlayoutVersion = "2.2.1"
 coreKtxVersion = "1.16.0"
 espressoCoreVersion = "3.6.1"
@@ -14,13 +14,13 @@ facebookLogin = "18.0.3"
 firebaseBomVersion = "33.14.0"
 firebaseUiAuthVersion = "9.0.0"
 googleFirebaseBom = "33.14.0"
-googleFirebaseBomVersion = "33.14.0"
+googleFirebaseBomVersion = "33.15.0"
 kotlin = "2.1.20"
 coreKtx = "1.16.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
-appcompat = "1.7.0"
+appcompat = "1.7.1"
 material = "1.12.0"
 activity = "1.10.1"
 constraintlayout = "2.2.1"
@@ -48,6 +48,9 @@ materialVersion = "1.12.0"
 
 androidxActivityKtx = "1.10.1"
 firebaseAuthKtx = "23.2.1" # Or your desired version
+androidGradlePlugin = "8.9.1"
+
+
 
 
 [libraries]

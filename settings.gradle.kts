@@ -22,3 +22,5 @@ dependencyResolutionManagement {
 rootProject.name = "TeseAuthFirebaseapp"
 include(":app")
 include(":quickstart-android-master")
+
+project(":quickstart-android-master").projectDir = File("../quickstart-android-master") // 최신  추가
