@@ -26,7 +26,11 @@ class SplashActivity : AppCompatActivity() {
         auth = Firebase.auth
 
         lifecycleScope.launch {
+<<<<<<< HEAD
             delay(1000) // 2초 딜레이
+=======
+            delay(700) // 2초 딜레이
+>>>>>>> e433a96 (메이져 브런치 인증2025.06.15)
 
             val userToReload = auth.currentUser
             if (userToReload != null) {

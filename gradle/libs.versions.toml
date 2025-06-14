@@ -47,10 +47,16 @@ materialVersion = "1.12.0"
 # ... 기타 필요한 버전들 (예: firebaseBom, firebaseUiAuth 등)
 
 androidxActivityKtx = "1.10.1"
+<<<<<<< HEAD
 firebaseAuthKtx = "23.2.1" # Or your desired version
 androidGradlePlugin = "8.9.1"
 
 
+=======
+firebaseAuthKtx = "23.2.1"
+firebaseCommonKtx = "21.0.0"
+firebaseFirestoreKtx = "25.1.4" # Or your desired version
+>>>>>>> e433a96 (메이져 브런치 인증2025.06.15)
 
 
 [libraries]
@@ -122,6 +128,8 @@ androidx-compose-ui = { group = "androidx.compose.ui", name = "ui" }
 material-v1110 = { module = "com.google.android.material:material", version.ref = "materialVersion" }
 ui = { module = "androidx.compose.ui:ui" }
 firebase-auth-ktx = { group = "com.google.firebase", name = "firebase-auth-ktx", version.ref = "firebaseAuthKtx" }
+firebase-common-ktx = { group = "com.google.firebase", name = "firebase-common-ktx", version.ref = "firebaseCommonKtx" }
+firebase-firestore-ktx = { group = "com.google.firebase", name = "firebase-firestore-ktx", version.ref = "firebaseFirestoreKtx" }
 # ... 기타 Compose 라이브러리들 ..
 
 
@@ -135,5 +143,6 @@ android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 google-gms-google-services = { id = "com.google.gms.google-services", version.ref = "googleGmsServices" }
 androidx-compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlinCompilerExtensionVersion" }
+android-library = { id = "com.android.library", version.ref = "agp" }
 
 

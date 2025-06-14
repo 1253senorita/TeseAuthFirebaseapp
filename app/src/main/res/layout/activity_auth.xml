@@ -24,7 +24,7 @@
         android:id="@+id/text_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sign In"
+        android:text="Sign In_activity_auth엑스엠엘text컴포넌트"
         android:textSize="24sp"
 
         android:fontWeight="700"
@@ -39,7 +39,7 @@
         android:id="@+id/button_sign_in"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Sign In with Email"
+        android:text="Sign In with Email activity_auth 엑스멤 레이아웃 버튼  콤퍼넌트   "
         app:layout_constraintTop_toBottomOf="@id/text_title"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

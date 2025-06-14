@@ -21,6 +21,12 @@ dependencyResolutionManagement {
 
 rootProject.name = "TeseAuthFirebaseapp"
 include(":app")
+<<<<<<< HEAD
 include(":quickstart-android-master")
 
 project(":quickstart-android-master").projectDir = File("../quickstart-android-master") // 최신  추가
+=======
+//include(":quickstart-android-master")
+include(":feature_firestore")
+include(":feature_storage")
+>>>>>>> e433a96 (메이져 브런치 인증2025.06.15)

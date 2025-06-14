@@ -162,8 +162,12 @@ dependencies {
     implementation(libs.firebase.perf.lib)
     implementation(libs.androidx.core.ktx)
     implementation ("androidx.core:core-splashscreen:1.0.0")
+<<<<<<< HEAD
 
     implementation(project(":quickstart-android-master"))  // 최신 버전 확인 필요
+=======
+    implementation (project(":feature_firestore"))
+>>>>>>> e433a96 (메이져 브런치 인증2025.06.15)
 
 }
 
