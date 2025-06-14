@@ -154,8 +154,7 @@ dependencies {
     implementation(libs.firebase.perf.lib)
     implementation(libs.androidx.core.ktx)
     implementation ("androidx.core:core-splashscreen:1.0.0")
-
-
+    implementation (project(":feature_firestore"))
 
 }
 

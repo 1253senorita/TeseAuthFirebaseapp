@@ -21,4 +21,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "TeseAuthFirebaseapp"
 include(":app")
-include(":quickstart-android-master")
+//include(":quickstart-android-master")
+include(":feature_firestore")
+include(":feature_storage")

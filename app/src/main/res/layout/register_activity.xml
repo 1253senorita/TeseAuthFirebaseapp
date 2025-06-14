@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="24dp"
-    tools:context=".AuthActivity">
+    tools:context=".RegisterActivity"> <!-- tools:context는 실제 액티비티 이름으로 변경 (예: .RegisterActivity) -->
 
     <!-- 앱 로고나 제목 (선택 사항) -->
     <TextView
@@ -19,7 +19,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="32dp"
-        android:layout_marginBottom="32dp"/>
+        android:layout_marginBottom="32dp" />
 
     <!-- 이메일 입력 필드 -->
     <EditText
@@ -33,7 +33,10 @@
         android:layout_marginBottom="16dp"
         app:layout_constraintTop_toBottomOf="@id/textViewTitle"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        android:imeOptions="actionDone" /> <!-- 다음 입력 필드로 이동 액션 추가 -->
+    <!-- android:nextFocusDown="@+id/passwordEditText" /> --> <!-- 명시적으로 다음 포커스 지정 (선택) -->
+    <!-- <requestFocus /> --> <!-- XML에서 초기 포커스 요청 (하나의 뷰에만 적용 가능) -->
 
     <!-- 비밀번호 입력 필드 -->
     <EditText
@@ -47,7 +50,8 @@
         android:layout_marginTop="16dp"
         app:layout_constraintTop_toBottomOf="@id/emailEditText"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        android:imeOptions="actionDone" /> <!-- 완료 액션 추가 (보통 로그인 버튼과 연결) -->
 
     <!-- 로그인 버튼 -->
     <Button

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name_firestore">Firestore 기능</string>
+    <string name="title_activity_firestore">Firestore 데이터 보기</string>
+    <!-- FirestoreActivity에서 사용할 다른 문자열들 -->
+</resources>
