@@ -1,0 +1,6 @@
+R_DEF: Internal format may change without notice
+local
+id main
+layout activity_firestore
+string app_name_firestore
+string title_activity_firestore

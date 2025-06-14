@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.salsample.teseauthfirebaseapp.feature_firestore" >
+
+    <uses-sdk android:minSdkVersion="24" />
+
+    <application>
+        <activity
+            android:name="com.salsample.teseauthfirebaseapp.feature_firestore.FirestoreActivity"
+            android:exported="false" />
+    </application>
+
+</manifest>

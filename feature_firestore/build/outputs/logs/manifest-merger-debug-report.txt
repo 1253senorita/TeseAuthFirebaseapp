@@ -1,0 +1,25 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\55341\TeseAuthFirebaseapp\feature_firestore\src\main\AndroidManifest.xml:2:1-11:12
+INJECTED from C:\Users\55341\TeseAuthFirebaseapp\feature_firestore\src\main\AndroidManifest.xml:2:1-11:12
+	package
+		ADDED from C:\Users\55341\TeseAuthFirebaseapp\feature_firestore\src\main\AndroidManifest.xml:3:5-66
+		INJECTED from C:\Users\55341\TeseAuthFirebaseapp\feature_firestore\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\55341\TeseAuthFirebaseapp\feature_firestore\src\main\AndroidManifest.xml:2:11-69
+application
+ADDED from C:\Users\55341\TeseAuthFirebaseapp\feature_firestore\src\main\AndroidManifest.xml:5:5-9:19
+activity#com.salsample.teseauthfirebaseapp.feature_firestore.FirestoreActivity
+ADDED from C:\Users\55341\TeseAuthFirebaseapp\feature_firestore\src\main\AndroidManifest.xml:6:9-8:40
+	android:exported
+		ADDED from C:\Users\55341\TeseAuthFirebaseapp\feature_firestore\src\main\AndroidManifest.xml:8:13-37
+	android:name
+		ADDED from C:\Users\55341\TeseAuthFirebaseapp\feature_firestore\src\main\AndroidManifest.xml:7:13-46
+uses-sdk
+INJECTED from C:\Users\55341\TeseAuthFirebaseapp\feature_firestore\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\55341\TeseAuthFirebaseapp\feature_firestore\src\main\AndroidManifest.xml
+INJECTED from C:\Users\55341\TeseAuthFirebaseapp\feature_firestore\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\Users\55341\TeseAuthFirebaseapp\feature_firestore\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\55341\TeseAuthFirebaseapp\feature_firestore\src\main\AndroidManifest.xml

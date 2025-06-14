@@ -1,0 +1,5 @@
+com.salsample.teseauthfirebaseapp.feature_firestore
+id main
+layout activity_firestore
+string app_name_firestore
+string title_activity_firestore
